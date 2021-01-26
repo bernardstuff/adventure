@@ -1,6 +1,10 @@
 const express = require('express');
+var exphbs  = require('express-handlebars');
 const path = require('path');
 const app = express();
+
+app.engine('.hbs', exphbs({extname: '.hbs'}));
+app.set('view engine', '.hbs');
 
 // static files
 app.use(express.static('./assets/css'));
@@ -9,32 +13,37 @@ app.use(express.static('./assets/img'));
 
 // routes
 app.get('/', (req,res) => {
-    res.sendFile(path.join(__dirname, 'views/adventure.html'));
+    res.render('adventure');
 });
 
 app.get('/run', (req,res) => {
-    res.sendFile(path.join(__dirname, 'views/run.html'));
+    res.render('run');
 });
 
 app.get('/stay', (req,res) => {
-    res.sendFile(path.join(__dirname, 'views/stay.html'));
+    res.render('stay');
 });
 
 app.get("/family", (req, res) => {
-  res.sendFile(path.join(__dirname, "views/family.html"));
+  res.render('family');
 });
 
 app.get("/meets-the-dog", (req, res) => {
-  res.sendFile(path.join(__dirname, "views/dog.html"));
+  res.render('dog');
 });
 
 app.get('/about', (req,res) => {
-    res.sendFile(path.join(__dirname, 'views/about.html'));
+    res.render('about');
+});
+
+app.get('/passwords', (req,res) => {
+    res.redirect('https://www.google.com/search?&q=Are+you+serious&oq=Are+you+serious')
 });
 
 
 const port = 3300;
-
+var iface='wlp2s0'
+var localip = require('local-ip')(iface);
 app.listen(port, () => {
-    console.log(`Duckeys adventure running at http://127.0.0.1:${port}`);
+    console.log(`Duckeys adventure running at http://${localip}:${port}`);
 })
