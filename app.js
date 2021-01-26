@@ -36,8 +36,8 @@ app.get('/about', (req,res) => {
     res.render('about');
 });
 
-app.get('/passwords', (req,res) => {
-    res.redirect('https://www.google.com/search?&q=Are+you+serious&oq=Are+you+serious')
+app.get('/secret-to-this-life', (req,res) => {
+    res.redirect('https://www.codecademy.com/learn')
 });
 
 
