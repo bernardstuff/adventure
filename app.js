@@ -40,10 +40,14 @@ app.get('/secret-to-this-life', (req,res) => {
     res.redirect('https://www.codecademy.com/learn')
 });
 
+let os = require( 'os' );
+let networkInterfaces = os.networkInterfaces();
+let arr = networkInterfaces['wlp2s0']
+let ip4 = arr[0].address
 
 const port = 3300;
-var iface='wlp2s0'
-var localip = require('local-ip')(iface);
 app.listen(port, () => {
-    console.log(`Duckeys adventure running at http://${localip}:${port}`);
+    console.log(`Duckeys adventure running at http://${ip4}:${port}`);
 })
+
+

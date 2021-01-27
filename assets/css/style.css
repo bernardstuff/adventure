@@ -59,9 +59,8 @@ a.link {
 
 a.link:hover {
   transition: ease-in 500ms ;
-  text-decoration: underline;
   border-radius: 7px;
-  color: #02C39A;
+  color: #B4B800;
   background-color: #0000008f;
 }
 
