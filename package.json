@@ -1,7 +1,7 @@
 {
   "name": "duckeys-adventure",
   "version": "1.0.0",
-  "description": "",
+  "description": "Duckey the Monkeys Adventure",
   "main": "app.js",
   "scripts": {
     "start": "nodemon"
@@ -10,9 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "animate.css": "^4.1.1",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "express-handlebars": "^5.2.0",
-    "local-ip": "^2.0.0"
+    "express-handlebars": "^5.2.0"
   }
 }
