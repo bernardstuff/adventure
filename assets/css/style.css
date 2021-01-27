@@ -86,7 +86,7 @@ a.link:hover {
   background: linear-gradient(to left, rgba(34,34,34,0.0), rgba(34,34,34,0.2), rgba(34,34,34,0.7), rgba(34,34,34,1));
 }
 
-/*.content::after {
+.content::after {
   border-radius: 8px;
   content: "";
   background: url('/content-bg.jpg');
@@ -99,7 +99,7 @@ a.link:hover {
   right: 0;
   position: absolute;
   z-index: -1;
-}*/
+}
 
 .content p, .content a {
   line-height: 1.7em;
